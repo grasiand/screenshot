@@ -1,3 +1,12 @@
+import os
+try:
+  import socket
+except:
+  os.system("pip install socket")
+try:
+  import requests
+except:
+  os.system("pip install requests")
 import socket
 import requests
 hostname = socket.gethostname()
