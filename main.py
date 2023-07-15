@@ -7,6 +7,12 @@ try:
   import requests
 except:
   os.system("pip install requests")
+try:
+  import pyautogui
+except:
+  os.system("pip install pyautogui")
+import pyautogui
+import io
 import socket
 import requests
 hostname = socket.gethostname()
